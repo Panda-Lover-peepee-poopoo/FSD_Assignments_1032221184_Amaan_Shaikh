@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration Form</title>
+  <style>
+    /* Global styling for the entire page */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* Styling for the registration form container */
+    #registrationForm {
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      width: 300px;
+      text-align: center;
+    }
+
+    /* Styling for the form elements */
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Styling for labels */
+    label {
+      margin-bottom: 8px;
+    }
+
+    /* Styling for text input fields */
+    input[type="text"],
+    input[type="password"] {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    /* Styling for the submit button */
+    button {
+      background-color: #007bff;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    /* Button hover effect */
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Styling for the result message */
+    #result {
+      color: green;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="registrationForm">
+    <!-- Registration form title -->
+    <h1>Student Registration Form</h1>
+    
+    <!-- Registration form fields -->
+    <form>
+      <!-- Username field -->
+      <label for="username">Username:</label>
+      <input type="text" id="username" required>
+
+      <!-- Email field -->
+      <label for="email">Email:</label>
+      <input type="text" id="email" required>
+
+      <!-- Phone number field -->
+      <label for="phone">Phone Number:</label>
+      <input type="text" id="phone" required>
+
+      <!-- Password field -->
+      <label for="password">Password:</label>
+      <input type="password" id="password" required>
+
+      <!-- Confirm Password field -->
+      <label for="confirmPassword">Confirm Password:</label>
+      <input type="password" id="confirmPassword" required>
+
+      <!-- Register button -->
+      <button type="button" id="registerButton">Register</button>
+    </form>
+
+    <!-- Result message container -->
+    <div id="result"></div>
+  </div>
+
+  <!-- Include jQuery library -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  <!-- JavaScript and jQuery code for validation and other operations -->
+  <script>
+    // JavaScript for form validation and DOM manipulation
+    // You can add your CSS styles in the <style> section above.
+
+    // DOM elements
+    const registrationForm = document.getElementById('registrationForm');
+    const usernameInput = document.getElementById('username');
+    const emailInput = document.getElementById('email');
+    const phoneInput = document.getElementById('phone');
+    const passwordInput = document.getElementById('password');
+    const confirmPasswordInput = document.getElementById('confirmPassword');
+    const resultDiv = document.getElementById('result');
+
+    // Validation and submission logic
+    $('#registerButton').click(function() {
+      const username = usernameInput.value.trim();
+      const email = emailInput.value.trim();
+      const phone = phoneInput.value.trim();
+      const password = passwordInput.value;
+      const confirmPassword = confirmPasswordInput.value;
+
+      // Validation checks go here
+      // For simplicity, I'll show a basic check for non-empty fields:
+      if (username === '' || email === '' || phone === '' || password === '' || confirmPassword === '') {
+        resultDiv.innerHTML = 'All fields are required.';
+      } else {
+        // Form is valid, you can proceed with submission or other actions
+        resultDiv.innerHTML = 'Form is valid. Submitting...';
+        // You can add your further logic here.
+      }
+    });
+
+    // jQuery code for additional operations
+
+    // Change button text using jQuery
+    $('#registerButton').text('Register Now');
+
+    // Set background-image using jQuery CSS property
+    $('#registrationForm').css('background-image', 'url("background.jpg")');
+
+    // Access HTML form data using jQuery
+    $('#registerButton').click(function() {
+      const formData = $('#registrationForm').serialize();
+      console.log(formData);
+    });
+
+    // Add attribute using jQuery
+    $('input[type="text"]').attr('placeholder', 'Enter your data');
+  </script>
+
+  <!-- Include jQuery library -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>

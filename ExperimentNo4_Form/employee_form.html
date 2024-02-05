@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Employee Details Form</h1>
+        <form action="process_employee.php" method="post">
+            <label for="emp_id">Employee ID:</label>
+            <input type="text" name="emp_id" id="emp_id" required><br><br>
+            
+            <label for="emp_name">Employee Name:</label>
+            <input type="text" name="emp_name" id="emp_name" required><br><br>
+            
+            <label for="department">Department:</label>
+            <input type="text" name="department" id="department" required><br><br>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="text" name="phone" id="phone" required><br><br>
+            
+            <input type="submit" name="insert" value="Insert">
+            <input type="submit" name="update" value="Update">
+            <input type="submit" name="delete" value="Delete">
+        </form>
+        
+        <h1>Display Updated Employee Details</h1>
+        <form action="process_employee.php" method="post">
+            <label for="emp_id_display">Employee ID:</label>
+            <input type="text" name="emp_id_display" id="emp_id_display" required>
+            <input type="submit" name="display" value="Display">
+        </form>
+    </div>
+</body>
+</html>

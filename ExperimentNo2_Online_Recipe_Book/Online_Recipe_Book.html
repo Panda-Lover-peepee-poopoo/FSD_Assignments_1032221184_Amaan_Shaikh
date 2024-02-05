@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Recipe Book</title>
+    <!-- Link to Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Internal CSS for additional styling -->
+    <style>
+        /* Global styles for the entire page */
+        body {
+            background-color: #2C3E50; /* Royal blue background color */
+            font-family: Arial, sans-serif;
+            color: #fff; /* White text color */
+        }
+
+        .container {
+            margin-top: 30px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for the container */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(139, 0, 0, 0.4); /* Royal red shadow for the container */
+        }
+
+        /* Styles for the page title */
+        h1 {
+            font-size: 48px; /* Larger font size for the title */
+            color: #8B0000; /* Darker red color for headings */
+            font-family: 'Times New Roman', Times, serif; /* Visually appealing font */
+            text-align: center; /* Center the title */
+            text-transform: uppercase; /* Uppercase for a flashy appearance */
+            letter-spacing: 5px; /* Increased letter spacing for a flashy look */
+        }
+
+        /* Styles for recipe containers */
+        .recipe-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .recipe-card {
+            background-color: #34495E; /* Dark blue recipe card color to match the background */
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            min-height: 400px; /* Set a minimum height for the recipe cards */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 0 10px rgba(139, 0, 0, 0.4); /* Royal red shadow for the recipe cards */
+            width: 48%; /* Adjust the width for spacing */
+        }
+
+        /* Styles for recipe titles */
+        .recipe-title {
+            font-size: 32px; /* Bigger font size for the title */
+            color: #fff; /* White text color for the title */
+            font-family: 'Times New Roman', Times, serif; /* Visually appealing font */
+            text-align: center; /* Center the recipe name */
+            padding: 10px; /* Add padding for spacing */
+        }
+
+        /* Styles for recipe descriptions */
+        .recipe-description {
+            font-size: 18px; /* Bigger font size for the description */
+            color: #fff; /* White text color for the description */
+            padding: 10px; /* Add padding for spacing */
+        }
+
+        /* Styles for "View Recipe" buttons */
+        .recipe-link {
+            color: #fff;
+            background-color: #007bff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            align-self: center; /* Center the "View Recipe" button */
+            margin-top: 10px; /* Add some space between the recipe description and button */
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+        }
+
+        /* Inverted button color on hover */
+        .recipe-link:hover {
+            background-color: #fff;
+            color: #007bff;
+        }
+
+        /* Styles for recipe images */
+        .recipe-image {
+            max-width: 50%;
+            box-shadow: 0 0 10px rgba(139, 0, 0, 0.4); /* Royal red shadow for the images */
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Online Recipe Book</h1>
+
+        <!-- Recipe 1 - Left Aligned -->
+        <div class="recipe-container">
+            <div class="recipe-card">
+                <h2 class="recipe-title">Classic Spaghetti Bolognese</h2>
+                <p class="recipe-description">Experience the rich flavors of this classic Italian pasta dish with a robust tomato sauce, perfectly seasoned ground beef, and aromatic herbs.</p>
+                <a href="#" class="recipe-link">View Recipe</a>
+            </div>
+            <img src="images/Classic_Spaghetti_Bolognese.jpg" alt="Spaghetti Bolognese" class="recipe-image img-fluid">
+        </div>
+
+        <!-- Recipe 2 - Right Aligned -->
+        <div class="recipe-container">
+            <img src="images/Chocolate_Brownies.jpg" alt="Chocolate Brownies" class="recipe-image img-fluid">
+            <div class="recipe-card">
+                <h2 class="recipe-title">Mouthwatering Chocolate Brownies</h2>
+                <p class="recipe-description">Indulge in the irresistible world of fudgy, chocolatey brownies that promise to melt in your mouth and satisfy your sweet cravings.</p>
+                <a href="#" class="recipe-link">View Recipe</a>
+            </div>
+        </div>
+
+        <!-- Recipe 3 - Left Aligned -->
+        <div class="recipe-container">
+            <div class="recipe-card">
+                <h2 class="recipe-title">Fresh Garden Salad</h2>
+                <p class="recipe-description">Elevate your taste buds with a light and refreshing garden salad featuring crisp vegetables, a zesty dressing, and a burst of flavors that celebrate nature's bounty.</p>
+                <a href="#" class="recipe-link">View Recipe</a>
+            </div>
+            <img src="images/Fresh_Green_Salad.jpg" alt="Garden Salad"  class="recipe-image img-fluid">
+        </div>
+
+        <!-- Recipe 4 - Right Aligned -->
+        <div class="recipe-container">
+            <img src="images/Homemade_Pizza.jpg" alt="Homemade Pizza" class="recipe-image img-fluid">
+            <div class="recipe-card">
+                <h2 class="recipe-title">Homemade Pizza</h2>
+                <p class="recipe-description">Unleash your inner chef and create a pizza masterpiece using the freshest ingredients, a crispy crust, and your own culinary creativity.</p>
+                <a href="#" class="recipe-link">View Recipe</a>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
